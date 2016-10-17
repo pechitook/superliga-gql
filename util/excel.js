@@ -1,12 +1,8 @@
 import { range } from './collection'
 
-export const getCellNumber = (cell) => {
-  return parseInt(cell.match(/\w(\d*)/)[1]);
-}
+export const getCellNumber = (cell) => parseInt(cell.match(/\w(\d*)/)[1])
 
-export const getCellColumn = (cell) => {
-  return cell.match(/(\w)/)[0];
-}
+export const getCellColumn = (cell) => cell.match(/^([A-Z])+/)[0]
 
 export const getRange = (ws, c1, c2) => {
   const column = getCellColumn(c1)
