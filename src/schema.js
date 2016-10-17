@@ -35,6 +35,6 @@ type Query {
 schema {
   query: Query
 }
-`;
+`
 
-export default [typeDefinitions];
+export default [typeDefinitions]

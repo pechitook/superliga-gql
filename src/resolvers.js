@@ -10,13 +10,13 @@ const resolveFunctions = {
     }
   },
   Match: {
-    homePlayer(match){
+    homePlayer(){
       return {}
     },
-    awayPlayer(match){
+    awayPlayer(){
       return {}
     }
   }
 }
 
-export default resolveFunctions;
+export default resolveFunctions
