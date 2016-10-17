@@ -8,7 +8,7 @@
     "pretest": "npm run lint",
     "test": "export NODE_PATH=./ && mocha --compilers js:babel-register --recursive",
     "test:watch": "npm test -- --watch",
-    "lint": "eslint src/ util/"
+    "lint": "eslint src/ server.js"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,7 @@ import XLSX from 'xlsx'
 import { getCellNumber, getRange } from './excel'
 
 const getSheet = (sheetName) => {
-  const workbook = XLSX.readFile(__dirname + '/../data/spreadsheet.xlsx')
+  const workbook = XLSX.readFile(__dirname + '/../../data/spreadsheet.xlsx')
   return workbook.Sheets[sheetName]
 }
 

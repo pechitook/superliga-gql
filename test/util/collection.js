@@ -1,4 +1,4 @@
-import { range } from 'util/collection'
+import { range } from 'src/util/collection'
 import expect from 'expect'
 
 describe('range', () => {

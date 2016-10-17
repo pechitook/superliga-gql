@@ -1,4 +1,4 @@
-import { getCellNumber, getCellColumn } from 'util/excel'
+import { getCellNumber, getCellColumn } from 'src/util/excel'
 import expect from 'expect'
 
 describe('getCellNumber', () => {
