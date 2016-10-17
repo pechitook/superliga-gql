@@ -1,15 +1,9 @@
-# apollo-server-tutorial
-This repo contains the full code for the GraphQL server tutorial (SQL, MongoDB + REST).
+# Superliga GraphQL
 
-Documentation and explanations can be found on [docs.apollostack.com](http://docs.apollostack.com/apollo-server/guide.html)
+GraphQL API that wraps the spreadsheet we use for La Superliga (FIFA internal tournament at [SCV](http://scvsoft.com/))
 
-## How to use
+## Usage
 
-In order for the MongoDB part of this example to work, you need to have MongoDB installed on your machine. All other required parts come with this package.
+`npm start` and go to `/graphiql` to play around. To consume it from a real client, POST to `/graphql`.
 
-```sh
-npm install
-npm start
-```
-
-The server should now accept requests at http://localhost:8080/graphql
+`npm run spreadsheet:update` downloads the latest version of [the spreadsheet](https://docs.google.com/spreadsheets/d/1dDsZY2MD7ZYq5xmVcebevu-ZVI4hwlTkhuyBoxAWGe8).
