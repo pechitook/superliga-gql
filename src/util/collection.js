@@ -5,7 +5,7 @@ export const range = function(start, stop, step) {
   }
   step = step || 1
 
-  var length = Math.max(Math.ceil((stop - start) / step), 0)
+  var length = Math.max(Math.ceil((stop + 1 - start) / step), 0)
   var range = Array(length)
 
   for (var idx = 0; idx < length; idx++, start += step) {
