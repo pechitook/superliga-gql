@@ -6,7 +6,7 @@ const getSheet = (sheetName) => {
   return workbook.Sheets[sheetName]
 }
 
-const getMatchesForPlayer = (playerName) => {
+const getMatchesForPlayer = () => {
   return []
 }
 
