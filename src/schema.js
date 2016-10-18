@@ -30,6 +30,7 @@ type Match {
 
 type Query {
   league(name: String): League
+  leagues: [League]
 }
 
 schema {

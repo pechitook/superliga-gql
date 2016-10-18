@@ -1,9 +1,10 @@
 import XLSX from 'xlsx'
 import { getCellNumber, getRange } from './excel'
 
+const getWorkbook = () => XLSX.readFile(__dirname + '/../../data/spreadsheet.xlsx')
+
 const getSheet = (sheetName) => {
-  const workbook = XLSX.readFile(__dirname + '/../../data/spreadsheet.xlsx')
-  return workbook.Sheets[sheetName]
+  return getWorkbook().Sheets[sheetName]
 }
 
 const getMatchesForPlayer = () => {
@@ -28,4 +29,11 @@ export const getPlayersForLeague = (league) => {
       matches: getMatchesForPlayer(name)
     })
   )
+}
+
+export const all = () => {
+  return getWorkbook()
+    .SheetNames
+    .slice(1, 4)
+    .map(name => ({ name }))
 }
