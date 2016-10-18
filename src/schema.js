@@ -1,4 +1,11 @@
 const typeDefinitions = `
+
+enum LeagueName {
+  ELITE
+  LOC
+  PARALIGA
+}
+
 type League {
   name: String,
   players: [Player]
@@ -29,7 +36,7 @@ type Match {
 }
 
 type Query {
-  league(name: String): League
+  league(name: LeagueName!): League
   leagues: [League]
 }
 
