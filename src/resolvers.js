@@ -1,8 +1,9 @@
-import { getPlayersForLeague } from './connectors'
+import { getPlayersForLeague, listLeagues } from './connectors'
 
 const resolveFunctions = {
   Query: {
-    league: async (_, { name }) => ({ name })
+    league: async (_, { name }) => ({ name }),
+    leagues: listLeagues
   },
   League: {
     players(league){
