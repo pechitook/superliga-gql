@@ -37,3 +37,14 @@ export const all = () => {
     .slice(1, 4)
     .map(name => ({ name }))
 }
+
+export const getLeagueByName = (name) => {
+  switch (name) {
+  case 'ELITE':
+    return { name: 'Elite' }
+  case 'LOC':
+    return { name: 'La otra Categoria' }
+  case 'PARALIGA':
+    return { name: 'Paraliga' }
+  }
+}
