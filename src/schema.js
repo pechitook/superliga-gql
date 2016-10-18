@@ -36,7 +36,7 @@ type Match {
 }
 
 type Query {
-  league(name: LeagueName): League
+  league(name: LeagueName!): League
   leagues: [League]
 }
 
