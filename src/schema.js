@@ -14,14 +14,14 @@ type League {
 type Player {
   name: String
   stats: Stats
-  matches: [Match]
+  matches(filter: MatchFilter): [Match]
 }
 
 type Stats {
   points: Int
   gamesPlayed: Int
   gamesWon: Int
-  gamesDrawed: Int
+  gamesDraw: Int
   gamesLost: Int
   goalsInFavor: Int
   goalsAgains: Int
@@ -29,10 +29,21 @@ type Stats {
 }
 
 type Match {
-  homePlayer: Player
-  homeScore: Int
-  awayPlayer: Player
-  awayScore: Int
+  home: MatchTeam
+  away: MatchTeam
+}
+
+type MatchTeam {
+  player: Player
+  score: Int
+}
+
+enum MatchFilter {
+  WON
+  LOST
+  DRAW
+  UNPLAYED
+  ALL
 }
 
 type Query {
