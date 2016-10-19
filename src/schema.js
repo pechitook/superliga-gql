@@ -13,6 +13,7 @@ type League {
 
 type Player {
   name: String
+  team: String
   stats: Stats
   matches(filter: MatchFilter): [Match]
 }
@@ -34,7 +35,7 @@ type Match {
 }
 
 type MatchTeam {
-  player: Player
+  player: Player,
   score: Int
 }
 
@@ -42,6 +43,7 @@ enum MatchFilter {
   WON
   LOST
   DRAW
+  PLAYED
   UNPLAYED
   ALL
 }
