@@ -1,14 +1,19 @@
-import { getPlayersForLeague, listLeagues, getLeague } from './connectors'
+import { getPlayersForLeague, listLeagues, getLeague, getPlayer } from './connectors'
 
 const resolveFunctions = {
   Query: {
     league: (_, { name }) => getLeague(name),
-    leagues: listLeagues
+    leagues: listLeagues,
+    player: (_, { name }) => getPlayer(name)
   },
   League: {
     players(league){
       return getPlayersForLeague(league.name)
     }
+  },
+  Player: {
+    stats: (player) => {},
+    matches: (player) => []
   },
   Match: {
     home(){

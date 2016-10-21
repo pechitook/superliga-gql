@@ -1,0 +1,7 @@
+{
+  "db": {
+    "host": "localhost:7474",
+    "user": "neo4j",
+    "password": "neo4j"
+  }
+}

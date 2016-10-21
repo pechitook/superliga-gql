@@ -51,6 +51,7 @@ enum MatchFilter {
 type Query {
   league(name: LeagueName!): League
   leagues: [League]
+  player(name: String!): Player
 }
 
 schema {
