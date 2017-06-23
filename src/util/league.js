@@ -24,7 +24,7 @@ export const getPlayersForLeague = (league) => {
         gamesLost: sheet[`M${getCellNumber(cell)}`].v,
         goalsInFavor: sheet[`N${getCellNumber(cell)}`].v,
         goalsAgains: sheet[`O${getCellNumber(cell)}`].v,
-        goalDifference: sheet[`P${getCellNumber(cell)}`].v,
+        goalDifference: sheet[`P${getCellNumber(cell)}`].v
       },
       matches: getMatchesForPlayer(name)
     })
@@ -40,11 +40,11 @@ export const all = () => {
 
 export const getLeagueByName = (name) => {
   switch (name) {
-  case 'ELITE':
-    return { name: 'Elite' }
-  case 'LOC':
-    return { name: 'La otra Categoria' }
-  case 'PARALIGA':
-    return { name: 'Paraliga' }
+    case 'ELITE':
+      return { name: 'Elite' }
+    case 'LOC':
+      return { name: 'La otra Categoria' }
+    case 'PARALIGA':
+      return { name: 'Paraliga' }
   }
 }
