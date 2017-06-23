@@ -1,4 +1,4 @@
-export const range = function(start, stop, step) {
+export const range = function (start, stop, step) {
   if (stop == null) {
     stop = start || 0
     start = 0

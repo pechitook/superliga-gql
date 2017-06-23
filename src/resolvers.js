@@ -6,15 +6,15 @@ const resolveFunctions = {
     leagues: listLeagues
   },
   League: {
-    players(league){
+    players (league) {
       return getPlayersForLeague(league.name)
     }
   },
   Match: {
-    home(){
+    home () {
       return {}
     },
-    away(){
+    away () {
       return {}
     }
   }

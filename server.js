@@ -1,5 +1,5 @@
 import express from 'express'
-import { apolloExpress, graphiqlExpress } from 'apollo-server'
+import { graphqlServerExpress, graphiqlExpress } from 'graphqlServerExpress'
 import { makeExecutableSchema } from 'graphql-tools'
 import bodyParser from 'body-parser'
 import Schema from './src/schema'
@@ -11,15 +11,15 @@ const graphQLServer = express()
 
 const executableSchema = makeExecutableSchema({
   typeDefs: Schema,
-  resolvers: Resolvers,
+  resolvers: Resolvers
 })
 
-graphQLServer.use('/graphql', bodyParser.json(), apolloExpress({
-  schema: executableSchema,
+graphQLServer.use('/graphql', bodyParser.json(), graphqlServerExpress({
+  schema: executableSchema
 }))
 
 graphQLServer.use('/graphiql', graphiqlExpress({
-  endpointURL: '/graphql',
+  endpointURL: '/graphql'
 }))
 
 /* eslint-disable no-console */
